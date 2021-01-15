@@ -122,7 +122,7 @@ public class NewJFrame extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(474, 800, 800, 800));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(400, 300));
-        setPreferredSize(new java.awt.Dimension(1011, 550));
+        setPreferredSize(new java.awt.Dimension(1060, 600));
         setResizable(false);
         setSize(new java.awt.Dimension(1011, 550));
         setType(java.awt.Window.Type.UTILITY);
@@ -132,11 +132,11 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        Strona_glowna.setBackground(new java.awt.Color(102, 102, 255));
+        Strona_glowna.setBackground(new java.awt.Color(255, 245, 186));
         Strona_glowna.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        Strona_glowna.setPreferredSize(new java.awt.Dimension(1031, 550));
+        Strona_glowna.setPreferredSize(new java.awt.Dimension(1060, 600));
 
-        wgTresci.setBackground(new java.awt.Color(102, 102, 255));
+        wgTresci.setBackground(new java.awt.Color(255, 245, 186));
         wgTresci.setText("Wg. Treści");
         wgTresci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +144,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        wgKategorii.setBackground(new java.awt.Color(102, 102, 255));
+        wgKategorii.setBackground(new java.awt.Color(255, 245, 186));
         wgKategorii.setText("Wg. Kategorii");
         wgKategorii.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,72 +201,66 @@ public class NewJFrame extends javax.swing.JFrame {
         Strona_glownaLayout.setHorizontalGroup(
             Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Strona_glownaLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(Strona_glownaLayout.createSequentialGroup()
-                        .addGap(498, 498, 498)
-                        .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(szukaj, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Strona_glownaLayout.createSequentialGroup()
-                                .addComponent(wgTresci)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(wgKategorii)))
-                        .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Strona_glownaLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ok)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(menu)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(opcje))
-                            .addGroup(Strona_glownaLayout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(o_aplikacji, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(Strona_glownaLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(kategorie_przepisow, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(Strona_glownaLayout.createSequentialGroup()
+                                    .addComponent(szukaj, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(ok)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(menu)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(opcje))
+                                .addGroup(Strona_glownaLayout.createSequentialGroup()
+                                    .addComponent(wgTresci)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(wgKategorii)
+                                    .addGap(186, 186, 186)))
+                            .addComponent(kategorie_przepisow, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(o_aplikacji, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 813, Short.MAX_VALUE))
+                .addGap(232, 232, 232))
             .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Strona_glownaLayout.createSequentialGroup()
                     .addGap(40, 40, 40)
                     .addComponent(tytul)
-                    .addContainerGap(835, Short.MAX_VALUE)))
+                    .addContainerGap(864, Short.MAX_VALUE)))
         );
         Strona_glownaLayout.setVerticalGroup(
             Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Strona_glownaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(Strona_glownaLayout.createSequentialGroup()
-                        .addComponent(szukaj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(wgTresci)
-                            .addComponent(wgKategorii))
-                        .addGap(19, 19, 19))
-                    .addGroup(Strona_glownaLayout.createSequentialGroup()
-                        .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(menu)
-                                .addComponent(opcje))
-                            .addComponent(ok))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(o_aplikacji)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kategorie_przepisow)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(szukaj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(menu)
+                        .addComponent(opcje))
+                    .addComponent(ok))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wgTresci)
+                    .addComponent(wgKategorii))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(o_aplikacji)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kategorie_przepisow)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
             .addGroup(Strona_glownaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Strona_glownaLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(tytul)
-                    .addContainerGap(519, Short.MAX_VALUE)))
+                    .addContainerGap(564, Short.MAX_VALUE)))
         );
 
-        Wyszukiwanie1_4.setBackground(new java.awt.Color(102, 102, 255));
-        Wyszukiwanie1_4.setPreferredSize(new java.awt.Dimension(1031, 550));
+        Wyszukiwanie1_4.setBackground(new java.awt.Color(255, 245, 186));
+        Wyszukiwanie1_4.setForeground(new java.awt.Color(255, 245, 186));
+        Wyszukiwanie1_4.setPreferredSize(new java.awt.Dimension(1060, 600));
 
         ile_wynikow.setText("ZNALEZIONO WYNIKÓW");
 
@@ -432,8 +426,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(94, Short.MAX_VALUE))
         );
 
-        Wyszukiwanie4_8.setBackground(new java.awt.Color(102, 102, 255));
-        Wyszukiwanie4_8.setPreferredSize(new java.awt.Dimension(1031, 550));
+        Wyszukiwanie4_8.setBackground(new java.awt.Color(255, 245, 186));
+        Wyszukiwanie4_8.setForeground(new java.awt.Color(255, 245, 186));
+        Wyszukiwanie4_8.setPreferredSize(new java.awt.Dimension(1060, 600));
 
         ile_wynikow1.setText("ZNALEZIONO WYNIKÓW");
 
@@ -599,8 +594,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(286, Short.MAX_VALUE))
         );
 
-        Wyszukiwanie8_12.setBackground(new java.awt.Color(102, 102, 255));
-        Wyszukiwanie8_12.setPreferredSize(new java.awt.Dimension(1031, 550));
+        Wyszukiwanie8_12.setBackground(new java.awt.Color(255, 245, 186));
+        Wyszukiwanie8_12.setForeground(new java.awt.Color(255, 245, 186));
+        Wyszukiwanie8_12.setPreferredSize(new java.awt.Dimension(1060, 600));
 
         ile_wynikow2.setText("ZNALEZIONO WYNIKÓW");
 
@@ -762,13 +758,16 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
-        Wyswietlanie_przepisu.setBackground(new java.awt.Color(102, 102, 255));
-        Wyswietlanie_przepisu.setPreferredSize(new java.awt.Dimension(1031, 550));
+        Wyswietlanie_przepisu.setBackground(new java.awt.Color(255, 245, 186));
+        Wyswietlanie_przepisu.setForeground(new java.awt.Color(255, 245, 186));
+        Wyswietlanie_przepisu.setPreferredSize(new java.awt.Dimension(1060, 600));
 
         jScrollPane3.setBackground(new java.awt.Color(102, 102, 255));
+        jScrollPane3.setAutoscrolls(true);
 
         wyswietl_tekst.setBackground(new java.awt.Color(102, 102, 255));
         wyswietl_tekst.setText("tu wyświetl tekst");
+        wyswietl_tekst.setToolTipText("");
         jScrollPane3.setViewportView(wyswietl_tekst);
 
         zapisz.setText("ZAPISZ PRZEPIS");
@@ -821,7 +820,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(tytul_przepisu)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Wyswietlanie_przepisuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3)
                     .addGroup(Wyswietlanie_przepisuLayout.createSequentialGroup()
                         .addComponent(wyswietl_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -829,14 +827,15 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(drukuj)
                         .addGap(18, 18, 18)
-                        .addComponent(wroc)
-                        .addGap(0, 279, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(wroc))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        Wyswietlanie_kategorii.setBackground(new java.awt.Color(102, 102, 255));
+        Wyswietlanie_kategorii.setBackground(new java.awt.Color(255, 245, 186));
         Wyswietlanie_kategorii.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        Wyswietlanie_kategorii.setPreferredSize(new java.awt.Dimension(1031, 550));
+        Wyswietlanie_kategorii.setForeground(new java.awt.Color(255, 245, 186));
+        Wyswietlanie_kategorii.setPreferredSize(new java.awt.Dimension(1060, 600));
 
         tytul1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tytul1.setText("KSIĄŻKA KUCHARSKA");
@@ -897,8 +896,9 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        opis_aplikacji.setBackground(new java.awt.Color(102, 102, 255));
-        opis_aplikacji.setPreferredSize(new java.awt.Dimension(1031, 550));
+        opis_aplikacji.setBackground(new java.awt.Color(255, 245, 186));
+        opis_aplikacji.setForeground(new java.awt.Color(255, 245, 186));
+        opis_aplikacji.setPreferredSize(new java.awt.Dimension(1060, 600));
 
         wroc5.setText("Wróć do menu głównego");
         wroc5.addActionListener(new java.awt.event.ActionListener() {
@@ -942,30 +942,30 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Wyszukiwanie8_12, javax.swing.GroupLayout.PREFERRED_SIZE, 1011, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(opis_aplikacji, javax.swing.GroupLayout.PREFERRED_SIZE, 1011, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Wyszukiwanie8_12, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(opis_aplikacji, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Wyszukiwanie4_8, javax.swing.GroupLayout.PREFERRED_SIZE, 1011, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Wyszukiwanie4_8, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Wyswietlanie_przepisu, javax.swing.GroupLayout.PREFERRED_SIZE, 1011, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Wyswietlanie_przepisu, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Strona_glowna, javax.swing.GroupLayout.PREFERRED_SIZE, 1011, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Wyswietlanie_kategorii, javax.swing.GroupLayout.PREFERRED_SIZE, 1011, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Strona_glowna, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Wyswietlanie_kategorii, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Wyszukiwanie1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 1011, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Wyszukiwanie1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -974,31 +974,31 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(Wyszukiwanie8_12, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
+                    .addComponent(Wyszukiwanie8_12, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(opis_aplikacji, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
+                    .addComponent(opis_aplikacji, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Wyszukiwanie4_8, javax.swing.GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
+                    .addComponent(Wyszukiwanie4_8, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 313, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 182, Short.MAX_VALUE)
-                    .addComponent(Wyswietlanie_przepisu, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
+                    .addComponent(Wyswietlanie_przepisu, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 183, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Strona_glowna, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
+                    .addComponent(Strona_glowna, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Wyswietlanie_kategorii, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
+                    .addComponent(Wyswietlanie_kategorii, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Wyszukiwanie1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Wyszukiwanie1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -1145,7 +1145,72 @@ sernik = new Przepis("Sernik",listC ,"Spód:\n" +
 "\n" +
 "    Schłodzony sernik przed podaniem posypać równą warstwą cukru. Cukier opalić palnikiem aby się skarmelizował (punkt po punkcie, powolnymi ruchami). Podawać z malinami i syropem malinowym.\n" +
 "", listD, sciezka_zdjecia) {};
+ 
+List<String> listE = new ArrayList();
+List<String> listF = new ArrayList();
+ listE.add(" 300 g szpinaku\n" +
+" 250 g ziemniakow)\n" +
+" 200g maki\n" +
+" 2 jajka\n"+
+" bulka tarta\n");
+
+
+listF.add("Obiad");
+
+listF.add("Przepisy Wloskie");
+
+listF.add("Wegetarianskie");
+
+
+sciezka_zdjecia =System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\gnochi.jpg";
+
+Przepis gnochi;
+
+gnochi = new Przepis("Gnochi",listE ,"\nKLUSKI\n" +
+
+"\n" +
+
+" Ziemnaki ugotowac, obrac, wymieszac z maka i jajkami na ciasto\n" +
+
+" Gotowe kluski gotowac minute po wrzuceniu do wrzacej wody\n" +
+
+" Podawać na talerzu\n" +
+
+"\n" +
+
+"", listF, sciezka_zdjecia) {};
+
+List<String> listG = new ArrayList();
+
+List<String> listH = new ArrayList();
+listG.add(" 300 g schabu\n" +
+" 250 g ziemniakow)\n" +
+" 200g maki\n" +
+" 2 jajka\n"+
+" bulka tarta\n");
+
+
+listH.add("Obiad");
+
+listH.add("Przepisy Polskie");
+
+listH.add("Mięsne");
+
+sciezka_zdjecia  =System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\schabowy.jpg";
+Przepis schabowy;
+
+schabowy = new Przepis("Schabowy",listG ,"\nMIESO\n" + 
+        "\n" +
+
+" Pokroic schab, obtoczyc w mace, obtaczyc w jajku, obtoczyc w bulce tartej\n" +
+
+" Mieso usmażyć, ziemniaki ugotowac\n" +
+
+" Podawać na talerzu\n" ,listH, sciezka_zdjecia) {};
+
+ 
  }
+ 
   public List<Przepis> wyszukajTekst(){
     String tekst = szukaj.getText();
     List<Przepis> znalezione = new ArrayList();
@@ -1281,8 +1346,17 @@ Wyswietlanie_kategorii.setVisible(false);
 kategorie_przepisow.setVisible(false);
 o_aplikacji.setVisible(false);
 dodawaniePrzepisow();
+
+String grafika =System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\cookbook4.png";
+
+   ImageIcon image = new ImageIcon(grafika);
+   jLabel1.setText("");
+   jLabel1.setIcon(image);  
+   
+  
     }//GEN-LAST:event_formWindowOpened
    
+    
         
     private void doprzodu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doprzodu1ActionPerformed
 Wyszukiwanie1_4.setVisible(false);
@@ -1435,10 +1509,6 @@ opis_aplikacji.setVisible(true);
 // TODO add your handling code here:
     }//GEN-LAST:event_o_aplikacjiActionPerformed
 
-    private void opcjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcjeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_opcjeActionPerformed
-
     private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
         if(kategorie_przepisow.isVisible() == false){
             kategorie_przepisow.setVisible(true);
@@ -1570,6 +1640,10 @@ Wyswietlanie_kategorii.setVisible(true);
         NewJFrame frame = new NewJFrame(); 
         frame.setVisible(true);       // TODO add your handling code here:
     }//GEN-LAST:event_wroc2actionPerformed
+
+    private void opcjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcjeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_opcjeActionPerformed
 
      
     /**
