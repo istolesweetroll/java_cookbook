@@ -48,7 +48,6 @@ public class NewJFrame extends javax.swing.JFrame {
         byDescriptionSearch = new javax.swing.JRadioButton();
         appTitle = new javax.swing.JLabel();
         menuButton = new javax.swing.JButton();
-        settingsButton = new javax.swing.JButton();
         aboutButton = new javax.swing.JButton();
         categoriesButton = new javax.swing.JButton();
         image = new javax.swing.JLabel();
@@ -132,7 +131,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         mainPage.add(byDescriptionSearch);
-        byDescriptionSearch.setBounds(340, 90, 110, 23);
+        byDescriptionSearch.setBounds(340, 90, 110, 29);
 
         appTitle.setText("app icon");
         mainPage.add(appTitle);
@@ -148,16 +147,6 @@ public class NewJFrame extends javax.swing.JFrame {
         mainPage.add(menuButton);
         menuButton.setBounds(860, 40, 60, 30);
 
-        settingsButton.setText("+");
-        settingsButton.setName("settingsButton"); // NOI18N
-        settingsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                settingsButtonActionPerformed(evt);
-            }
-        });
-        mainPage.add(settingsButton);
-        settingsButton.setBounds(790, 40, 60, 30);
-
         aboutButton.setText("O aplikacji");
         aboutButton.setName("aboutButton"); // NOI18N
         aboutButton.addActionListener(new java.awt.event.ActionListener() {
@@ -166,7 +155,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         mainPage.add(aboutButton);
-        aboutButton.setBounds(800, 110, 180, 23);
+        aboutButton.setBounds(800, 110, 180, 29);
 
         categoriesButton.setText("Kategorie przepisów");
         categoriesButton.setName("categoriesButton"); // NOI18N
@@ -176,7 +165,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         mainPage.add(categoriesButton);
-        categoriesButton.setBounds(800, 80, 180, 23);
+        categoriesButton.setBounds(800, 80, 180, 29);
 
         image.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         image.setText("testst");
@@ -191,7 +180,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         mainPage.add(byCategoriesSearch);
-        byCategoriesSearch.setBounds(470, 90, 150, 23);
+        byCategoriesSearch.setBounds(470, 90, 150, 29);
 
         searchButton.setText("SZUKAJ");
         searchButton.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +189,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         mainPage.add(searchButton);
-        searchButton.setBounds(700, 40, 80, 30);
+        searchButton.setBounds(700, 40, 150, 30);
 
         Wyszukiwanie1_4.setBackground(new java.awt.Color(255, 245, 186));
         Wyszukiwanie1_4.setForeground(new java.awt.Color(255, 245, 186));
@@ -209,6 +198,8 @@ public class NewJFrame extends javax.swing.JFrame {
         Wyszukiwanie1_4.setPreferredSize(new java.awt.Dimension(1000, 600));
         Wyszukiwanie1_4.setLayout(null);
 
+        ile_wynikow.setBackground(new java.awt.Color(255, 245, 186));
+        ile_wynikow.setForeground(new java.awt.Color(51, 51, 51));
         ile_wynikow.setText("ZNALEZIONO WYNIKÓW");
         Wyszukiwanie1_4.add(ile_wynikow);
         ile_wynikow.setBounds(30, 10, 190, 80);
@@ -374,7 +365,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         recipePage.add(zapisz);
-        zapisz.setBounds(690, 350, 250, 23);
+        zapisz.setBounds(690, 350, 250, 29);
 
         drukuj.setText("DRUKUJ PRZEPIS");
         drukuj.addActionListener(new java.awt.event.ActionListener() {
@@ -383,7 +374,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         recipePage.add(drukuj);
-        drukuj.setBounds(690, 380, 250, 23);
+        drukuj.setBounds(690, 380, 250, 29);
 
         wroc.setText("WRÓĆ DO MENU GŁÓWNEGO");
         wroc.addActionListener(new java.awt.event.ActionListener() {
@@ -392,7 +383,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         recipePage.add(wroc);
-        wroc.setBounds(700, 530, 240, 23);
+        wroc.setBounds(700, 530, 240, 29);
 
         tytul_przepisu.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         tytul_przepisu.setText("tytul przepisu");
@@ -433,7 +424,7 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(aboutPageLayout.createSequentialGroup()
                 .addGap(120, 120, 120)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                 .addComponent(wroc5)
                 .addGap(62, 62, 62))
         );
@@ -505,7 +496,14 @@ public class NewJFrame extends javax.swing.JFrame {
         categoriesPage.setVisible(false);
         categoriesButton.setVisible(false);
         aboutButton.setVisible(false);
-
+        P1Z.setVisible(false);
+        P1T.setVisible(false);
+                P2Z.setVisible(false);
+        P2T.setVisible(false);
+                P3Z.setVisible(false);
+        P3T.setVisible(false);
+                P4Z.setVisible(false);
+        P4T.setVisible(false);
         initializeRepository();
 
         String grafika = System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\cookbook4.png";
@@ -527,6 +525,8 @@ public class NewJFrame extends javax.swing.JFrame {
         repository = new Repository();
         Recipe recipe = new Recipe();
         recipe.addCategory("Desery");
+        recipe.addCategory("Kuchnia Polska");
+        recipe.addCategory("Wegetariańskie");
         recipe.setTitle("Szarlotka");
         recipe.addIngredients("300 g mąki\n"
                 + "    250 g zimnego masła (50 g masła można zastąpić smalcem)\n"
@@ -559,12 +559,71 @@ public class NewJFrame extends javax.swing.JFrame {
         recipe.setImagePath(System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\szarlotka.jpg");
 
         Recipe recipe2 = new Recipe();
-        recipe2.addCategory("Wegetariańskie");
-        recipe2.setTitle("Sernik");
-        recipe2.setImagePath(System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\sernik.jpg");
-        recipe2.setDescription("testset");
+        recipe2.addCategory("Mięsne");
+        recipe2.addCategory("Kuchnia Polska");
+        recipe2.setTitle("Kurczak w sosie");
+                recipe2.addIngredients("2 pojedyncze filety kurczaka\n" +
+"1/2 łyżeczki kurkumy, 1 łyżeczka słodkiej papryki, szczypta ostrej\n" +
+"150 g pieczarek\n" +
+"1 mała cebula\n" +
+"2/3 szklanki bulionu drobiowego\n" +
+"1 łyżka posiekanego koperku\n" +
+"1/2 szklanki śmietanki 30% lub 18% (do zup i sosów)\n" +
+"po 1 łyżce oleju, masła i mąki pszennej");
+        recipe2.setImagePath(System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\kurczak.jpg");
+        recipe2.setDescription("•	Kurczaka oczyścić z błonek i kostek, pokroić na mniejsze filety w następujący sposób: odkroić polędwiczkę, następnie filet przekroić pionowo na dwie połówki. Grubszą połówkę przekroić jeszcze wzdłuż na 2 cieńsze części.\n" +
+"•	Mięso rozbić tłuczkiem na jednakową grubość, ok. 1 cm. Doprawić solą, pieprzem, kurkumą oraz paprykami. Wymieszać z łyżką oleju i obtoczyć w mące.\n" +
+"•	Pieczarki umyć i dokładnie osuszyć, następnie pokroić na cienkie plasterki. Cebulę pokroić w kosteczkę. \n" +
+"•	Rozgrzać patelnię z olejem, włożyć filety kurczaka, smażyć po ok. 2 minuty z każdej strony na większym ogniu. Wyjąć na talerz.\n" +
+"•	Na tę samą patelnię włożyć cebulę i delikatnie ją podsmażyć, następnie dodać pieczarki oraz masło i smażyć co chwilę mieszając przez ok. 3 - 4 minuty, aż pieczarki lekko się zrumienią.\n" +
+"•	Włożyć z powrotem mięso na patelnię i wsunąć je pomiędzy pieczarki. Trzymając danie na ogniu wlać bulion i zagotować.\n" +
+"•	Dodać koperek oraz śmietankę, delikatnie przemieszać składniki potrząsając patelnią. Gotować przez ok. 1 - 2  minuty aż sos zgęstnieje.");
+        
+                Recipe recipe3 = new Recipe();
+        recipe3.addCategory("Rybne");
+        recipe3.setTitle("Łosoś ze szparagami");
+                recipe3.addIngredients("1 pęczek szparagów\n" +
+"ok. 600 g filetów łososia\n" +
+"2 ząbki czosnku\n" +
+"1 łyżka mąki pszennej\n" +
+"1 łyżka oliwy\n" +
+"1/2 cebuli\n" +
+"2/3 szklanki bulionu\n" +
+"125 ml śmietanki 30%\n" +
+"2 łyżeczki posiekanego koperku");
+        recipe3.setImagePath(System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\losos.jpg");
+        recipe3.setDescription("•	Szparagi umyć i odłamać grube końce (same złamią się w odpowiednim miejscu). Końce nie będą wykorzystane. Łodyżki pokroić ukośnie na ok. 1/2 cm plasterki, główki pozostawić w całości.\n" +
+"•	Odciąć skórę z łososia, pokroić go na porcje, doprawić solą, pieprzem, natrzeć przeciśniętym przez praskę czosnkiem i obtoczyć w mące.\n" +
+"•	Rozgrzać patelnię z oliwą, włożyć łososia i na nieco większym ogniu obsmażyć go z dwóch stron, po około 1 minucie (w środku ma pozostać surowy). Delikatnie odłożyć na talerz.\n" +
+"•	Na tę samą patelnię włożyć pokrojoną w kosteczkę cebulę. Smażyć przez ok. 3 minuty często mieszając.\n" +
+"•	Dodać pokrojone szparagi (łodyżki i główki) i mieszając smażyć przez ok. 1 - 2 minuty. Wlać bulion i po zagotowaniu gotować jeszcze przez ok. 3 minuty. Doprawić świeżo zmielonym pieprzem.\n" +
+"•	Wlać śmietankę i wymieszać. W powstały sos włożyć podsmażonego łososia, posypać koperkiem i gotować przez ok. 2 minuty. Sos można doprawić solą w razie potrzeby.");
+        
+                        Recipe recipe4 = new Recipe();
+        recipe4.addCategory("Mięsne");
+        recipe4.setTitle("Tortilla wołowa");
+                recipe4.addIngredients("4 tortille\n" +
+"1 cebula\n" +
+"400 g mielonego mięsa wołowego\n" +
+"1 łyżka przyprawy kuchni meksykańskiej*\n" +
+"2 łyżeczki koncentratu pomidorowego\n" +
+"1 mała puszka czerwonej fasoli\n" +
+"1 mała puszka kukurydzy\n" +
+"5 kawałków suszonych pomidorów (opcjonalnie)\n" +
+"1 puszka krojonych pomidorów\n" +
+"300 g tartego żółtego sera (np. żółta mozzarella plus cheddar)\n" +
+"świeża kolendra\n" +
+"olej roślinny");
+        recipe4.setImagePath(System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\tortilla.jpg");
+        recipe4.setDescription("•	Na dużej patelni na 2 łyżkach oleju zeszklić pokrojoną w kosteczkę cebulę (ok. 7 minut). Dodać zmielone mięso, posypać przyprawami i mieszając obsmażyć aż zmieni kolor. Przykryć i smażyć dalej na małym ogniu przez 15 minut.\n" +
+"•	Dodać koncentrat pomidorowy, odcedzoną fasolkę i kukurydzę oraz (opcjonalnie) pokrojone suszone pomidory. Wymieszać i gotować wszystko jeszcze przez ok. 5 minut.\n" +
+"•	Farsz wyłożyć na tortille, posypać serem (zachować ok. 1/3 ilości sera na wierzch) i zwinąć w rulony, ułożyć w naczyniu żaroodpornym.\n" +
+"•	Krojone pomidory doprawić solą, pieprzem, szczyptą cukru i gotować przez ok. 10 minut bez przykrycia. Polać po tortillach i posypać pozostałym serem.\n" +
+"•	Piec w piekarniku nagrzanym do 180 stopni C przez ok. 20 minut. Posypać listkami kolendry i podawać.");
         repository.addRecipe(recipe);
         repository.addRecipe(recipe2);
+        repository.addRecipe(recipe3);
+        repository.addRecipe(recipe4);
     }
 
 
@@ -664,10 +723,6 @@ public class NewJFrame extends javax.swing.JFrame {
         mainPage.setVisible(false);
         aboutPage.setVisible(true);
     }//GEN-LAST:event_aboutButtonActionPerformed
-
-    private void settingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_settingsButtonActionPerformed
 
     private void menuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuButtonActionPerformed
         if (categoriesButton.isVisible() == false) {
@@ -789,6 +844,7 @@ public class NewJFrame extends javax.swing.JFrame {
         }
         ile_wynikow.setText(a);
         ile_wynikow.setVisible(true);
+
     }
 
     /**
@@ -835,7 +891,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel recipePage;
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField searchInput;
-    private javax.swing.JButton settingsButton;
     private javax.swing.JLabel tytul_przepisu;
     private javax.swing.JButton wroc;
     private javax.swing.JButton wroc2;
