@@ -43,6 +43,10 @@ public class Recipe {
         categories.add(kategoria);
     }
     
+    public void addIngredients(String ingredients){
+        this.ingredients.add(ingredients);
+    }
+    
     @Override
     public String toString() {
         String text = title;

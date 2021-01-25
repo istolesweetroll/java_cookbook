@@ -37,7 +37,17 @@ public class Repository {
 
         return searchResult;
     }
-
+    
+    public List<Recipe> getRecipesWithCategory(String searchedText) {
+        List<Recipe> searchResult = new ArrayList();
+        
+        for (Recipe recipe : getAllRecipies()) {
+            if (recipe.getCategories().contains(searchedText)) {
+                searchResult.add(recipe);
+            }
+        }
+        return searchResult;
+    }
     public void addRecipe(Recipe recipe) {   
         List<String> categories = recipe.getCategories();
 

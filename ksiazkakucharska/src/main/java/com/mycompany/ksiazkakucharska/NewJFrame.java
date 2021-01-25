@@ -46,14 +46,14 @@ public class NewJFrame extends javax.swing.JFrame {
         mainPage = new javax.swing.JPanel();
         searchInput = new javax.swing.JTextField();
         byDescriptionSearch = new javax.swing.JRadioButton();
-        byCategoriesSearch = new javax.swing.JRadioButton();
-        searchButton = new javax.swing.JButton();
         appTitle = new javax.swing.JLabel();
         menuButton = new javax.swing.JButton();
         settingsButton = new javax.swing.JButton();
         aboutButton = new javax.swing.JButton();
         categoriesButton = new javax.swing.JButton();
         image = new javax.swing.JLabel();
+        byCategoriesSearch = new javax.swing.JRadioButton();
+        searchButton = new javax.swing.JButton();
         Wyszukiwanie1_4 = new javax.swing.JPanel();
         ile_wynikow = new java.awt.Label();
         P1Z = new javax.swing.JLabel();
@@ -94,7 +94,7 @@ public class NewJFrame extends javax.swing.JFrame {
         cofnij3 = new javax.swing.JButton();
         wroc4 = new javax.swing.JButton();
         categoriesPage = new javax.swing.JPanel();
-        tytul1 = new javax.swing.JLabel();
+        appTitle2 = new javax.swing.JLabel();
         pom1 = new javax.swing.JLabel();
         lista_przepisow = new java.awt.List();
         pom = new javax.swing.JLabel();
@@ -126,11 +126,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 255));
-        setBounds(new java.awt.Rectangle(0, 0, 1060, 620));
+        setBounds(new java.awt.Rectangle(0, 0, 1000, 600));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(400, 300));
-        setPreferredSize(new java.awt.Dimension(1060, 600));
-        setSize(new java.awt.Dimension(1060, 600));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1000, 600));
         setType(java.awt.Window.Type.UTILITY);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -139,16 +139,18 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         mainPage.setBackground(new java.awt.Color(255, 245, 186));
-        mainPage.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         mainPage.setAlignmentX(0.0F);
         mainPage.setAlignmentY(0.0F);
-        mainPage.setPreferredSize(new java.awt.Dimension(1060, 600));
+        mainPage.setPreferredSize(new java.awt.Dimension(1000, 600));
+        mainPage.setLayout(null);
 
         searchInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchInputActionPerformed(evt);
             }
         });
+        mainPage.add(searchInput);
+        searchInput.setBounds(340, 30, 350, 50);
 
         byDescriptionSearch.setBackground(new java.awt.Color(255, 245, 186));
         byDescriptionSearch.setText("Wg. Treści");
@@ -157,23 +159,12 @@ public class NewJFrame extends javax.swing.JFrame {
                 byDescriptionSearchActionPerformed(evt);
             }
         });
-
-        byCategoriesSearch.setBackground(new java.awt.Color(255, 245, 186));
-        byCategoriesSearch.setText("Wg. Kategorii");
-        byCategoriesSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                byCategoriesSearchActionPerformed(evt);
-            }
-        });
-
-        searchButton.setText("SZUKAJ");
-        searchButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchButtonActionPerformed(evt);
-            }
-        });
+        mainPage.add(byDescriptionSearch);
+        byDescriptionSearch.setBounds(340, 90, 110, 23);
 
         appTitle.setText("app icon");
+        mainPage.add(appTitle);
+        appTitle.setBounds(10, 10, 232, 155);
 
         menuButton.setText("☰");
         menuButton.setName("menuButton"); // NOI18N
@@ -182,6 +173,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 menuButtonActionPerformed(evt);
             }
         });
+        mainPage.add(menuButton);
+        menuButton.setBounds(860, 40, 60, 30);
 
         settingsButton.setText("+");
         settingsButton.setName("settingsButton"); // NOI18N
@@ -190,6 +183,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 settingsButtonActionPerformed(evt);
             }
         });
+        mainPage.add(settingsButton);
+        settingsButton.setBounds(790, 40, 60, 30);
 
         aboutButton.setText("O aplikacji");
         aboutButton.setName("aboutButton"); // NOI18N
@@ -198,6 +193,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 aboutButtonActionPerformed(evt);
             }
         });
+        mainPage.add(aboutButton);
+        aboutButton.setBounds(800, 110, 180, 23);
 
         categoriesButton.setText("Kategorie przepisów");
         categoriesButton.setName("categoriesButton"); // NOI18N
@@ -206,79 +203,45 @@ public class NewJFrame extends javax.swing.JFrame {
                 categoriesButtonActionPerformed(evt);
             }
         });
+        mainPage.add(categoriesButton);
+        categoriesButton.setBounds(800, 80, 180, 23);
 
         image.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         image.setText("testst");
+        mainPage.add(image);
+        image.setBounds(0, 150, 1000, 450);
 
-        javax.swing.GroupLayout mainPageLayout = new javax.swing.GroupLayout(mainPage);
-        mainPage.setLayout(mainPageLayout);
-        mainPageLayout.setHorizontalGroup(
-            mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPageLayout.createSequentialGroup()
-                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mainPageLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(aboutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(mainPageLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(appTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(232, 232, 232)
-                        .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(mainPageLayout.createSequentialGroup()
-                                .addComponent(byDescriptionSearch)
-                                .addGap(38, 38, 38)
-                                .addComponent(byCategoriesSearch))
-                            .addComponent(searchInput, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(mainPageLayout.createSequentialGroup()
-                                .addComponent(searchButton)
-                                .addGap(18, 18, 18)
-                                .addComponent(settingsButton)
-                                .addGap(18, 18, 18)
-                                .addComponent(menuButton))
-                            .addComponent(categoriesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(1060, 1060, 1060))
-            .addGroup(mainPageLayout.createSequentialGroup()
-                .addComponent(image, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        mainPageLayout.setVerticalGroup(
-            mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPageLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(searchInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(settingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(menuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(searchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(appTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mainPageLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(categoriesButton))
-                    .addGroup(mainPageLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(byCategoriesSearch)
-                            .addComponent(byDescriptionSearch))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(aboutButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(image, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
-        );
+        byCategoriesSearch.setBackground(new java.awt.Color(255, 245, 186));
+        byCategoriesSearch.setText("Wg. Kategorii");
+        byCategoriesSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                byCategoriesSearchActionPerformed(evt);
+            }
+        });
+        mainPage.add(byCategoriesSearch);
+        byCategoriesSearch.setBounds(470, 90, 150, 23);
+
+        searchButton.setText("SZUKAJ");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
+        mainPage.add(searchButton);
+        searchButton.setBounds(700, 40, 80, 30);
 
         Wyszukiwanie1_4.setBackground(new java.awt.Color(255, 245, 186));
         Wyszukiwanie1_4.setForeground(new java.awt.Color(255, 245, 186));
         Wyszukiwanie1_4.setAlignmentX(0.0F);
         Wyszukiwanie1_4.setAlignmentY(0.0F);
-        Wyszukiwanie1_4.setPreferredSize(new java.awt.Dimension(1011, 550));
+        Wyszukiwanie1_4.setPreferredSize(new java.awt.Dimension(1000, 600));
+        Wyszukiwanie1_4.setLayout(null);
 
         ile_wynikow.setText("ZNALEZIONO WYNIKÓW");
+        Wyszukiwanie1_4.add(ile_wynikow);
+        ile_wynikow.setBounds(30, 10, 190, 80);
 
+        P1Z.setBackground(new java.awt.Color(240, 240, 40));
         P1Z.setText("P1Z");
         P1Z.setName("P1Z"); // NOI18N
         P1Z.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -286,6 +249,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P1TMouseClicked(evt);
             }
         });
+        Wyszukiwanie1_4.add(P1Z);
+        P1Z.setBounds(80, 100, 200, 200);
 
         P1T.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         P1T.setText("P1T");
@@ -295,6 +260,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P1TMouseClicked(evt);
             }
         });
+        Wyszukiwanie1_4.add(P1T);
+        P1T.setBounds(80, 330, 190, 40);
 
         P2Z.setText("P2Z");
         P2Z.setName("P1Z"); // NOI18N
@@ -303,6 +270,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P2TMouseClicked(evt);
             }
         });
+        Wyszukiwanie1_4.add(P2Z);
+        P2Z.setBounds(320, 100, 200, 200);
 
         P2T.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         P2T.setText("P2T");
@@ -312,6 +281,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P2TMouseClicked(evt);
             }
         });
+        Wyszukiwanie1_4.add(P2T);
+        P2T.setBounds(320, 330, 160, 50);
 
         P4Z.setText("P4Z");
         P4Z.setName("P1Z"); // NOI18N
@@ -320,6 +291,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P4TMouseClicked(evt);
             }
         });
+        Wyszukiwanie1_4.add(P4Z);
+        P4Z.setBounds(750, 100, 200, 200);
 
         P3Z.setText("P3Z");
         P3Z.setName("P1Z"); // NOI18N
@@ -328,6 +301,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P3TMouseClicked(evt);
             }
         });
+        Wyszukiwanie1_4.add(P3Z);
+        P3Z.setBounds(530, 100, 200, 200);
 
         P4T.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         P4T.setText("P4T");
@@ -337,6 +312,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P4TMouseClicked(evt);
             }
         });
+        Wyszukiwanie1_4.add(P4T);
+        P4T.setBounds(750, 340, 200, 40);
 
         P3T.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         P3T.setText("P3T");
@@ -346,6 +323,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P3TMouseClicked(evt);
             }
         });
+        Wyszukiwanie1_4.add(P3T);
+        P3T.setBounds(530, 340, 140, 40);
 
         doprzodu1.setText("→");
         doprzodu1.addActionListener(new java.awt.event.ActionListener() {
@@ -353,6 +332,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 doprzodu1ActionPerformed(evt);
             }
         });
+        Wyszukiwanie1_4.add(doprzodu1);
+        doprzodu1.setBounds(540, 460, 200, 30);
 
         cofnij1.setText("←");
         cofnij1.addActionListener(new java.awt.event.ActionListener() {
@@ -360,6 +341,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 cofnij1ActionPerformed(evt);
             }
         });
+        Wyszukiwanie1_4.add(cofnij1);
+        cofnij1.setBounds(180, 460, 210, 30);
 
         wroc2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         wroc2.setText("Wróć do menu głównego");
@@ -368,86 +351,19 @@ public class NewJFrame extends javax.swing.JFrame {
                 wroc2actionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout Wyszukiwanie1_4Layout = new javax.swing.GroupLayout(Wyszukiwanie1_4);
-        Wyszukiwanie1_4.setLayout(Wyszukiwanie1_4Layout);
-        Wyszukiwanie1_4Layout.setHorizontalGroup(
-            Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Wyszukiwanie1_4Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(wroc2)
-                    .addComponent(ile_wynikow, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Wyszukiwanie1_4Layout.createSequentialGroup()
-                .addContainerGap(78, Short.MAX_VALUE)
-                .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Wyszukiwanie1_4Layout.createSequentialGroup()
-                        .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(P1Z, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(P1T, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(P2Z, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(P2T, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(P3Z, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(P3T, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(P4Z, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(P4T, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Wyszukiwanie1_4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cofnij1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(doprzodu1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(459, 459, 459)))
-                .addGap(20, 20, 20))
-        );
-        Wyszukiwanie1_4Layout.setVerticalGroup(
-            Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Wyszukiwanie1_4Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(ile_wynikow, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(wroc2)
-                .addGap(49, 49, 49)
-                .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Wyszukiwanie1_4Layout.createSequentialGroup()
-                        .addComponent(P1Z, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(P1T, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Wyszukiwanie1_4Layout.createSequentialGroup()
-                        .addComponent(P2Z, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(P2T, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Wyszukiwanie1_4Layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Wyszukiwanie1_4Layout.createSequentialGroup()
-                                .addComponent(P4Z, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(P4T, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(Wyszukiwanie1_4Layout.createSequentialGroup()
-                                .addComponent(P3Z, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(P3T, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(39, 39, 39)
-                .addGroup(Wyszukiwanie1_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(doprzodu1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cofnij1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(128, Short.MAX_VALUE))
-        );
+        Wyszukiwanie1_4.add(wroc2);
+        wroc2.setBounds(350, 510, 220, 30);
 
         Wyszukiwanie4_8.setBackground(new java.awt.Color(255, 245, 186));
         Wyszukiwanie4_8.setForeground(new java.awt.Color(255, 245, 186));
         Wyszukiwanie4_8.setAlignmentX(0.0F);
         Wyszukiwanie4_8.setAlignmentY(0.0F);
-        Wyszukiwanie4_8.setPreferredSize(new java.awt.Dimension(1060, 600));
+        Wyszukiwanie4_8.setPreferredSize(new java.awt.Dimension(1000, 600));
+        Wyszukiwanie4_8.setLayout(null);
 
         ile_wynikow1.setText("ZNALEZIONO WYNIKÓW");
+        Wyszukiwanie4_8.add(ile_wynikow1);
+        ile_wynikow1.setBounds(0, 0, 0, 0);
 
         P5Z.setText("P5Z");
         P5Z.setName("P1Z"); // NOI18N
@@ -456,6 +372,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P5TMouseClicked(evt);
             }
         });
+        Wyszukiwanie4_8.add(P5Z);
+        P5Z.setBounds(0, 0, 0, 0);
 
         P5T.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         P5T.setText("P5T");
@@ -465,6 +383,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P5TMouseClicked(evt);
             }
         });
+        Wyszukiwanie4_8.add(P5T);
+        P5T.setBounds(0, 0, 0, 0);
 
         P6Z.setText("P6Z");
         P6Z.setName("P1Z"); // NOI18N
@@ -473,6 +393,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P6TMouseClicked(evt);
             }
         });
+        Wyszukiwanie4_8.add(P6Z);
+        P6Z.setBounds(0, 0, 0, 0);
 
         P6T.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         P6T.setText("P6T");
@@ -482,6 +404,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P6TMouseClicked(evt);
             }
         });
+        Wyszukiwanie4_8.add(P6T);
+        P6T.setBounds(0, 0, 0, 0);
 
         P8Z.setText("P8Z");
         P8Z.setName("P1Z"); // NOI18N
@@ -490,6 +414,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P8TMouseClicked(evt);
             }
         });
+        Wyszukiwanie4_8.add(P8Z);
+        P8Z.setBounds(0, 0, 0, 0);
 
         P7Z.setText("P7Z");
         P7Z.setName("P1Z"); // NOI18N
@@ -498,6 +424,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P7TMouseClicked(evt);
             }
         });
+        Wyszukiwanie4_8.add(P7Z);
+        P7Z.setBounds(0, 0, 0, 0);
 
         P8T.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         P8T.setText("P8T");
@@ -507,6 +435,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P8TMouseClicked(evt);
             }
         });
+        Wyszukiwanie4_8.add(P8T);
+        P8T.setBounds(0, 0, 0, 0);
 
         P7T.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
         P7T.setText("P7T");
@@ -516,6 +446,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 P7TMouseClicked(evt);
             }
         });
+        Wyszukiwanie4_8.add(P7T);
+        P7T.setBounds(0, 0, 0, 0);
 
         doprzodu2.setText("→");
         doprzodu2.addActionListener(new java.awt.event.ActionListener() {
@@ -523,6 +455,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 doprzodu2ActionPerformed(evt);
             }
         });
+        Wyszukiwanie4_8.add(doprzodu2);
+        doprzodu2.setBounds(0, 0, 0, 0);
 
         cofnij2.setText("←");
         cofnij2.addActionListener(new java.awt.event.ActionListener() {
@@ -530,6 +464,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 cofnij2ActionPerformed(evt);
             }
         });
+        Wyszukiwanie4_8.add(cofnij2);
+        cofnij2.setBounds(0, 0, 0, 0);
 
         wroc3.setText("Wróć do menu głównego");
         wroc3.addActionListener(new java.awt.event.ActionListener() {
@@ -537,85 +473,14 @@ public class NewJFrame extends javax.swing.JFrame {
                 wroc2actionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout Wyszukiwanie4_8Layout = new javax.swing.GroupLayout(Wyszukiwanie4_8);
-        Wyszukiwanie4_8.setLayout(Wyszukiwanie4_8Layout);
-        Wyszukiwanie4_8Layout.setHorizontalGroup(
-            Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Wyszukiwanie4_8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cofnij2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(doprzodu2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(481, 481, 481))
-            .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(ile_wynikow1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(wroc3))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Wyszukiwanie4_8Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(P5Z, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(P5T, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(P6Z, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(P6T, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(P7Z, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(P7T, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(P8Z, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(P8T, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(71, Short.MAX_VALUE))
-        );
-        Wyszukiwanie4_8Layout.setVerticalGroup(
-            Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(ile_wynikow1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(wroc3))
-                .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                                .addComponent(P5Z, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(P5T, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                                .addComponent(P6Z, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(P6T, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                                .addComponent(P8Z, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(P8T, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(Wyszukiwanie4_8Layout.createSequentialGroup()
-                                .addComponent(P7Z, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(P7T, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(39, 39, 39)
-                .addGroup(Wyszukiwanie4_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(doprzodu2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cofnij2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(158, Short.MAX_VALUE))
-        );
+        Wyszukiwanie4_8.add(wroc3);
+        wroc3.setBounds(0, 0, 0, 0);
 
         Wyszukiwanie8_12.setBackground(new java.awt.Color(255, 245, 186));
         Wyszukiwanie8_12.setForeground(new java.awt.Color(255, 245, 186));
         Wyszukiwanie8_12.setAlignmentX(0.0F);
         Wyszukiwanie8_12.setAlignmentY(0.0F);
-        Wyszukiwanie8_12.setPreferredSize(new java.awt.Dimension(1060, 600));
+        Wyszukiwanie8_12.setPreferredSize(new java.awt.Dimension(1000, 600));
 
         ile_wynikow2.setText("ZNALEZIONO WYNIKÓW");
 
@@ -780,14 +645,18 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         categoriesPage.setBackground(new java.awt.Color(255, 245, 186));
-        categoriesPage.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         categoriesPage.setForeground(new java.awt.Color(255, 245, 186));
         categoriesPage.setAlignmentX(0.0F);
         categoriesPage.setAlignmentY(0.0F);
-        categoriesPage.setPreferredSize(new java.awt.Dimension(1011, 550));
+        categoriesPage.setPreferredSize(new java.awt.Dimension(1000, 600));
+        categoriesPage.setLayout(null);
 
-        tytul1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        tytul1.setText("KSIĄŻKA KUCHARSKA");
+        appTitle2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        appTitle2.setText("appTitle2");
+        categoriesPage.add(appTitle2);
+        appTitle2.setBounds(350, 20, 232, 155);
+        categoriesPage.add(pom1);
+        pom1.setBounds(698, 90, 90, 50);
 
         lista_przepisow.setBackground(new java.awt.Color(102, 102, 255));
         lista_przepisow.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
@@ -801,6 +670,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 lista_przepisowPropertyChange(evt);
             }
         });
+        categoriesPage.add(lista_przepisow);
+        lista_przepisow.setBounds(280, 230, 370, 340);
 
         pom.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         pom.setText("Wybierz kategorie aby zobaczyć znajdujące się w niej przepisy");
@@ -809,47 +680,15 @@ public class NewJFrame extends javax.swing.JFrame {
                 pomMouseClicked(evt);
             }
         });
-
-        javax.swing.GroupLayout categoriesPageLayout = new javax.swing.GroupLayout(categoriesPage);
-        categoriesPage.setLayout(categoriesPageLayout);
-        categoriesPageLayout.setHorizontalGroup(
-            categoriesPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, categoriesPageLayout.createSequentialGroup()
-                .addGap(0, 73, Short.MAX_VALUE)
-                .addGroup(categoriesPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(categoriesPageLayout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(pom1))
-                    .addGroup(categoriesPageLayout.createSequentialGroup()
-                        .addGap(337, 337, 337)
-                        .addComponent(lista_przepisow, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(categoriesPageLayout.createSequentialGroup()
-                        .addGap(245, 245, 245)
-                        .addComponent(pom))
-                    .addGroup(categoriesPageLayout.createSequentialGroup()
-                        .addGap(401, 401, 401)
-                        .addComponent(tytul1)))
-                .addGap(253, 253, 253))
-        );
-        categoriesPageLayout.setVerticalGroup(
-            categoriesPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(categoriesPageLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(tytul1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pom)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pom1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lista_przepisow, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
-        );
+        categoriesPage.add(pom);
+        pom.setBounds(220, 170, 500, 50);
 
         recipePage.setBackground(new java.awt.Color(255, 245, 186));
         recipePage.setForeground(new java.awt.Color(255, 245, 186));
         recipePage.setAlignmentX(0.0F);
         recipePage.setAlignmentY(0.0F);
-        recipePage.setPreferredSize(new java.awt.Dimension(1060, 600));
+        recipePage.setPreferredSize(new java.awt.Dimension(1000, 600));
+        recipePage.setLayout(null);
 
         jScrollPane3.setBackground(new java.awt.Color(102, 102, 255));
         jScrollPane3.setAutoscrolls(true);
@@ -859,12 +698,19 @@ public class NewJFrame extends javax.swing.JFrame {
         wyswietl_tekst.setToolTipText("");
         jScrollPane3.setViewportView(wyswietl_tekst);
 
+        recipePage.add(jScrollPane3);
+        jScrollPane3.setBounds(10, 80, 660, 502);
+        recipePage.add(wyswietl_zdjecie);
+        wyswietl_zdjecie.setBounds(690, 80, 256, 256);
+
         zapisz.setText("ZAPISZ PRZEPIS");
         zapisz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 zapiszActionPerformed(evt);
             }
         });
+        recipePage.add(zapisz);
+        zapisz.setBounds(690, 350, 250, 23);
 
         drukuj.setText("DRUKUJ PRZEPIS");
         drukuj.addActionListener(new java.awt.event.ActionListener() {
@@ -872,6 +718,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 drukujActionPerformed(evt);
             }
         });
+        recipePage.add(drukuj);
+        drukuj.setBounds(690, 380, 250, 23);
 
         wroc.setText("WRÓĆ DO MENU GŁÓWNEGO");
         wroc.addActionListener(new java.awt.event.ActionListener() {
@@ -879,52 +727,19 @@ public class NewJFrame extends javax.swing.JFrame {
                 wrocActionPerformed(evt);
             }
         });
+        recipePage.add(wroc);
+        wroc.setBounds(700, 530, 240, 23);
 
+        tytul_przepisu.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         tytul_przepisu.setText("tytul przepisu");
-
-        javax.swing.GroupLayout recipePageLayout = new javax.swing.GroupLayout(recipePage);
-        recipePage.setLayout(recipePageLayout);
-        recipePageLayout.setHorizontalGroup(
-            recipePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(recipePageLayout.createSequentialGroup()
-                .addGroup(recipePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(recipePageLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(tytul_przepisu))
-                    .addGroup(recipePageLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 731, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(recipePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(wroc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(drukuj, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(zapisz, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(wyswietl_zdjecie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(120, Short.MAX_VALUE))
-        );
-        recipePageLayout.setVerticalGroup(
-            recipePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(recipePageLayout.createSequentialGroup()
-                .addContainerGap(76, Short.MAX_VALUE)
-                .addComponent(tytul_przepisu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(recipePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(recipePageLayout.createSequentialGroup()
-                        .addComponent(wyswietl_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(zapisz)
-                        .addGap(18, 18, 18)
-                        .addComponent(drukuj)
-                        .addGap(18, 18, 18)
-                        .addComponent(wroc))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        recipePage.add(tytul_przepisu);
+        tytul_przepisu.setBounds(10, 20, 240, 40);
 
         aboutPage.setBackground(new java.awt.Color(255, 245, 186));
         aboutPage.setForeground(new java.awt.Color(255, 245, 186));
         aboutPage.setAlignmentX(0.0F);
         aboutPage.setAlignmentY(0.0F);
-        aboutPage.setPreferredSize(new java.awt.Dimension(1060, 600));
+        aboutPage.setPreferredSize(new java.awt.Dimension(1000, 600));
 
         wroc5.setText("Wróć do menu głównego");
         wroc5.addActionListener(new java.awt.event.ActionListener() {
@@ -934,153 +749,58 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("<html>Ta aplikacja powstała jako projekt zaliczeniowy z przedmiotu Programowanie w Javie. <br>Jest ona wirtualną książką kucharską z funkcją wyszukiwania przepisów, <br> jak również zapisywania oraz drukowania ich zawartości. <br>Autorzy:<br>* Julia Olszewska <br> * Andrzej Kozińśki <br> * Mikołaj Sobiegraj</html>");
+        jLabel2.setText("<html>Ta aplikacja powstała jako projekt zaliczeniowy z przedmiotu Programowanie w Javie. <br>Jest ona wirtualną książką kucharską z funkcją wyszukiwania przepisów, <br> jak również zapisywania oraz drukowania ich zawartości. <br>Autorzy:<br>* Julia Olszewska <br> * Andrzej Koziński <br> * Mikołaj Sobiegraj</html>");
 
         javax.swing.GroupLayout aboutPageLayout = new javax.swing.GroupLayout(aboutPage);
         aboutPage.setLayout(aboutPageLayout);
         aboutPageLayout.setHorizontalGroup(
             aboutPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, aboutPageLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(wroc5)
-                .addGap(51, 51, 51))
             .addGroup(aboutPageLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, aboutPageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(wroc5)
+                .addGap(53, 53, 53))
         );
         aboutPageLayout.setVerticalGroup(
             aboutPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(aboutPageLayout.createSequentialGroup()
                 .addGap(120, 120, 120)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
                 .addComponent(wroc5)
-                .addGap(34, 34, 34))
+                .addGap(62, 62, 62))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mainPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 15, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(aboutPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Wyszukiwanie8_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 25, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 20, Short.MAX_VALUE)
-                    .addComponent(Wyszukiwanie4_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 20, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 20, Short.MAX_VALUE)
-                    .addComponent(recipePage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 20, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 20, Short.MAX_VALUE)
-                    .addComponent(Wyszukiwanie1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 20, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(34, 34, 34)
-                    .addComponent(categoriesPage, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addComponent(Wyszukiwanie8_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(aboutPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(categoriesPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(mainPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Wyszukiwanie4_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Wyszukiwanie1_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(recipePage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(mainPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(566, 566, 566))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(Wyszukiwanie8_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(aboutPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Wyszukiwanie4_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(recipePage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Wyszukiwanie1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(339, 339, 339)
-                    .addComponent(categoriesPage, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(279, Short.MAX_VALUE)))
+            .addComponent(Wyszukiwanie8_12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(aboutPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(categoriesPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(mainPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Wyszukiwanie4_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Wyszukiwanie1_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(recipePage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public List<Recipe> przeszukajkategorie() {
-        String categoryText = searchInput.getText();
-        List<Recipe> znalezione = new ArrayList();
-        for (Recipe recipe : repository.getAllRecipies()) {
-            if (recipe.getCategories().contains(categoryText)) {
-                znalezione.add(recipe);
-            }
-        }
-        return znalezione;
-    }
-
-    //CONTROLLER     
-    public class PrzepisController {
-
-        public Recipe model;
-        public NewJFrame.PrzepisView view;
-
-        public PrzepisController(Recipe model, NewJFrame.PrzepisView view) {
-            this.model = model;
-            this.view = view;
-        }
-
-        void wyswietl_caly_przepis_controller(JLabel miejscenazdjecie, JLabel miejscenatekst, String tekstprzepisu) {
-            view.wyswietl_caly_przepis(model, miejscenazdjecie, miejscenatekst, model.getTekstPrzepisuSformatowany());
-        }
-
-        void wyswietl_zdjecie_i_tytul_controller(JLabel miejscenazdjecie, JLabel miejscenatekst) {
-            view.wyswietl_zdjecie_i_tytul(model, miejscenazdjecie, miejscenatekst);
-        }
-    }
-
     //VIEW        
-    public class PrzepisView {
-
-        public void wyswietl_caly_przepis(Recipe przepis, JLabel miejscenazdjecie, JLabel miejscenatekst, String tekstprzepisu) {
-            ImageIcon iconLogo = new ImageIcon(przepis.getImagePath());
-            miejscenazdjecie.setIcon(iconLogo);
-            miejscenatekst.setText(tekstprzepisu);
-        }
-
-        public void wyswietl_zdjecie_i_tytul(Recipe przepis, JLabel miejscenazdjecie, JLabel miejscenatekst) {
-            ImageIcon iconLogo = new ImageIcon(przepis.getImagePath());
-            miejscenazdjecie.setText("");
-            miejscenazdjecie.setIcon(iconLogo);
-            miejscenatekst.setText(przepis.getTitle());
-        }
-    }
-
     void wyswietlprzepis(JLabel label) {
         if (Wyszukiwanie1_4.isVisible()) {
             Wyszukiwanie1_4.setVisible(false);
@@ -1097,12 +817,12 @@ public class NewJFrame extends javax.swing.JFrame {
         String tytul = label.getText();
         Recipe wybranyprzepis = null;
         for (Recipe przepisy1 : repository.getAllRecipies()) {
-            if (przepisy1.getTitle() == tytul) {
+            if (przepisy1.getTitle() == null ? tytul == null : przepisy1.getTitle().equals(tytul)) {
                 wybranyprzepis = przepisy1;
             }
         }
-        PrzepisView view = new PrzepisView();
-        PrzepisController controller = new PrzepisController(wybranyprzepis, view);
+        View view = new View();
+        Controller controller = new Controller(wybranyprzepis, view);
         controller.wyswietl_caly_przepis_controller(wyswietl_zdjecie, wyswietl_tekst, wybranyprzepis.getTekstPrzepisuSformatowany());
         tytul_przepisu.setText(wybranyprzepis.getTitle());
 
@@ -1153,22 +873,64 @@ public class NewJFrame extends javax.swing.JFrame {
         aboutButton.setVisible(false);
 
         initializeRepository();
-        
+
         String grafika = System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\cookbook4.png";
         ImageIcon imageIcon = new ImageIcon(grafika);
         image.setText("");
         image.setIcon(imageIcon);
+        String grafika2 = System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\CBbannerFV.png";
+        ImageIcon imageIcon2 = new ImageIcon(grafika2);
+        appTitle.setText("");
+        appTitle.setIcon(imageIcon2);
+        String grafika3 = System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\CBbannerFV.png";
+        ImageIcon imageIcon3 = new ImageIcon(grafika3);
+        appTitle2.setText("");
+        appTitle2.setIcon(imageIcon3);
+
     }//GEN-LAST:event_formWindowOpened
 
     private void initializeRepository() {
         repository = new Repository();
         Recipe recipe = new Recipe();
-        recipe.addCategory("obiad"); 
-        recipe.setTitle("zupa");
-        recipe.setDescription("cosik");
+        recipe.addCategory("Desery");
+        recipe.setTitle("Szarlotka");
+        recipe.addIngredients("300 g mąki\n"
+                + "    250 g zimnego masła (50 g masła można zastąpić smalcem)\n"
+                + "    1,5 łyżeczki proszku do pieczenia\n"
+                + "    5 łyżek cukru\n"
+                + "    1 łyżka cukru wanilinowego\n"
+                + "    1 jajko"
+                + "     1,5 kg jabłek na szarlotkę (szara reneta, antonówka) lub 1 słoik ok. 800 g gotowych jabłek\n"
+                + "    5 łyżek cukru\n"
+                + "    1/2 łyżeczki cynamonu\n"
+                + "    cukier puder");
+        recipe.setDescription("\\nCIASTO\\n\"\n"
+                + "\\n\"\n"
+                + "    Z podanych składników zagnieść ciasto kruche (w robocie kuchennym lub na stolnicy): do przesianej mąki dodać pokrojone w kostkę zimne masło, proszek do pieczenia, cukier i cukier wanilinowy.\\n\"\n"
+                + "    Rozdrabniać składniki na kruszonkę, pod koniec dodać jajko i połączyć składniki w jednolite i gładkie ciasto (może być klejące).\\n\"\n"
+                + "    Włożyć do zamrażarki na ok. 15 - 30 minut.\\n\"\n"
+                + "\\n\"\n"
+                + "JABŁKA\\n\"\n"
+                + "\\n\"\n"
+                + "    Jabłka obrać, pokroić na ćwiartki i wyciąć gniazda nasienne. Pokroić na mniejsze kawałki i włożyć do szerokiego garnka lub głęboką patelnię.\\n\"\n"
+                + "    Dodać cukier i smażyć przez ok. 10 - 15 minut co chwilę mieszając, aż jabłka zmiękną i zaczną się rozpadać. Pod koniec dodać cynamon.\\n\"\n"
+                + "\\n\"\n"
+                + "PIECZENIE\\n\"\n"
+                + "\\n\"\n"
+                + "    Piekarnik nagrzać do 180 stopni C. Przygotować małą foremkę (np. o średnicy 26 cm lub 21 x 28 cm lub 24 x 24 cm).\\n\"\n"
+                + "    Wyjąć jedną połówkę ciasta z zamrażarki, pokroić nożem na plasterki i wylepić nimi spód formy, doklejając brakujące miejsca palcami.\\n\"\n"
+                + "    Na spód wyłożyć jabłka.\\n\"\n"
+                + "    Pozostałe ciasto zetrzeć na tarce bezpośrednio na jabłka (lub pokroić ciasto na plasterki i ułożyć na wierzchu).\\n\"\n"
+                + "    Wstawić do piekarnika i piec przez ok. 50 - 55 minut na złoty kolor. Posypać cukrem pudrem. Pokroić po ostudzeniu.\\n\"");
         recipe.setImagePath(System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\szarlotka.jpg");
 
+        Recipe recipe2 = new Recipe();
+        recipe2.addCategory("Wegetariańskie");
+        recipe2.setTitle("Sernik");
+        recipe2.setImagePath(System.getProperty("user.dir") + "\\src\\main\\java\\Zdjecia\\sernik.jpg");
+        recipe2.setDescription("testset");
         repository.addRecipe(recipe);
+        repository.addRecipe(recipe2);
     }
 
 
@@ -1318,29 +1080,13 @@ public class NewJFrame extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_wrocActionPerformed
 
-    private void lista_przepisowPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_lista_przepisowPropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lista_przepisowPropertyChange
-
-    private void pomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pomMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pomMouseClicked
-
-    private void lista_przepisowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lista_przepisowActionPerformed
-        String wybrany = lista_przepisow.getSelectedItem();
-        categoriesPage.setVisible(false);
-        searchInput.setText(wybrany);
-        byCategoriesSearch.setSelected(true);
-        searchButtonActionPerformed(evt);
-    }//GEN-LAST:event_lista_przepisowActionPerformed
-
     private void wroc2actionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wroc2actionPerformed
         Wyszukiwanie1_4.setVisible(false);
         mainPage.setVisible(true);
         dispose();//Reset aplikacji
         NewJFrame frame = new NewJFrame();
         frame.setVisible(true);
- 
+
     }//GEN-LAST:event_wroc2actionPerformed
 
     private void categoriesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriesButtonActionPerformed
@@ -1355,7 +1101,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private void aboutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutButtonActionPerformed
         mainPage.setVisible(false);
         aboutPage.setVisible(true);
-        // TODO add your handling code here:
     }//GEN-LAST:event_aboutButtonActionPerformed
 
     private void settingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsButtonActionPerformed
@@ -1373,7 +1118,6 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_menuButtonActionPerformed
 
-//POPRAWIĆ TO, ŻEBY BYŁO ZGODNE Z MVC
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
 
         List<Recipe> wyniki = new ArrayList();
@@ -1386,10 +1130,22 @@ public class NewJFrame extends javax.swing.JFrame {
         } else {
             if (byDescriptionSearch.isSelected()) {
                 wyniki = repository.getRecipesWithText(searchInput.getText());
+                if (wyniki.size() < 1) {
+                    JOptionPane.showMessageDialog(wybierz_kategorie, "Brak wyników");
+                    dispose();
+                    NewJFrame frame = new NewJFrame();
+                    frame.setVisible(true);
+                }
             }
 
             if (byCategoriesSearch.isSelected()) {
-                wyniki = przeszukajkategorie();
+                wyniki = repository.getRecipesWithCategory(searchInput.getText());
+                if (wyniki.size() < 1) {
+                    JOptionPane.showMessageDialog(wybierz_kategorie, "Brak wyników");
+                    dispose();
+                    NewJFrame frame = new NewJFrame();
+                    frame.setVisible(true);
+                }
             }
 
             mainPage.setVisible(false);
@@ -1415,28 +1171,14 @@ public class NewJFrame extends javax.swing.JFrame {
                 label_zdjecie.setVisible(true);
                 int nowei = i - 1;
 
-                PrzepisView view = new PrzepisView();
-                PrzepisController controller = new PrzepisController(wyniki.get(nowei), view);
+                View view = new View();
+                Controller controller = new Controller(wyniki.get(nowei), view);
                 controller.wyswietl_zdjecie_i_tytul_controller(label_zdjecie, label_tekst);
 
             }
         }
     }//GEN-LAST:event_searchButtonActionPerformed
 
-    private void updateSearchResultCount(int count) {
-        String a = null; 
-        if (count == 1) {
-            a = "Znaleziono " + count + " wynik";
-        }
-        if (2 <= count && count <= 4) {
-            a = "Znaleziono " + count + " wyniki";
-        }
-        if (count >= 5) {
-            a = "Znaleziono " + count + " wyników";
-        }
-        ile_wynikow.setText(a);
-        ile_wynikow.setVisible(true);
-    }
     private void byCategoriesSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byCategoriesSearchActionPerformed
         if (!byDescriptionSearch.isSelected()) {
             byCategoriesSearch.setSelected(true);
@@ -1462,6 +1204,37 @@ public class NewJFrame extends javax.swing.JFrame {
     private void searchInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchInputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchInputActionPerformed
+
+    private void pomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pomMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pomMouseClicked
+
+    private void lista_przepisowPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_lista_przepisowPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lista_przepisowPropertyChange
+
+    private void lista_przepisowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lista_przepisowActionPerformed
+        String wybrany = lista_przepisow.getSelectedItem();
+        categoriesPage.setVisible(false);
+        searchInput.setText(wybrany);
+        byCategoriesSearch.setSelected(true);
+        searchButtonActionPerformed(evt);
+    }//GEN-LAST:event_lista_przepisowActionPerformed
+
+    private void updateSearchResultCount(int count) {
+        String a = null;
+        if (count == 1) {
+            a = "Znaleziono " + count + " wynik";
+        }
+        if (2 <= count && count <= 4) {
+            a = "Znaleziono " + count + " wyniki";
+        }
+        if (count >= 5) {
+            a = "Znaleziono " + count + " wyników";
+        }
+        ile_wynikow.setText(a);
+        ile_wynikow.setVisible(true);
+    }
 
     /**
      * @param args the command line arguments
@@ -1507,6 +1280,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton aboutButton;
     private javax.swing.JPanel aboutPage;
     private javax.swing.JLabel appTitle;
+    private javax.swing.JLabel appTitle2;
     private javax.swing.JRadioButton byCategoriesSearch;
     private javax.swing.JRadioButton byDescriptionSearch;
     private javax.swing.JButton categoriesButton;
@@ -1533,7 +1307,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField searchInput;
     private javax.swing.JButton settingsButton;
-    private javax.swing.JLabel tytul1;
     private javax.swing.JLabel tytul_przepisu;
     private javax.swing.JButton wroc;
     private javax.swing.JButton wroc2;
